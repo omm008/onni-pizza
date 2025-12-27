@@ -2,42 +2,44 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Static data outside component to prevent recreation
+// 1. Create this array exactly like this
 const pizzaFlavors = [
   {
     id: 1,
     name: "Margherita",
     description: "The Queen. Tomato, mozzarella, basil.",
-    image: "images/pizzas/margherita.png",
+    // 👇 The fix: This automatically adds "/onni-pizza/" on GitHub and "/" locally
+    image: `${import.meta.env.BASE_URL}images/pizzas/margherita.png`,
   },
   {
     id: 2,
     name: "Pepperoni",
     description: "Spicy cups. Mozzarella, honey hot.",
-    image: "images/pizzas/pepperoni.png",
+    image: `${import.meta.env.BASE_URL}images/pizzas/pepperoni.png`,
   },
   {
     id: 3,
     name: "Vegetarian",
     description: "Garden patch. Peppers, olives, herbs.",
-    image: "images/pizzas/vegetarian.png",
+    image: `${import.meta.env.BASE_URL}images/pizzas/vegetarian.png`,
   },
   {
     id: 4,
     name: "Quattro Formaggi",
     description: "Cheese bomb. Gorgonzola, fontina, parm.",
-    image: "images/pizzas/quattro-formaggi.png",
+    image: `${import.meta.env.BASE_URL}images/pizzas/quattro-formaggi.png`,
   },
   {
     id: 5,
     name: "Hawaiian",
     description: "The Controversy. Ham, pineapple.",
-    image: "images/pizzas/hawaiian.png",
+    image: `${import.meta.env.BASE_URL}images/pizzas/hawaiian.png`,
   },
   {
     id: 6,
     name: "BBQ Chicken",
     description: "Smoky sweet. Red onions, cilantro.",
-    image: "images/pizzas/bbq-chicken.png",
+    image: `${import.meta.env.BASE_URL}images/pizzas/bbq-chicken.png`,
   },
 ];
 

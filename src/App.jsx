@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/onni-pizza">
       <ScrollToTop />{" "}
       {/* <--- 2. Add it here, inside Router but outside Layout */}
       <Layout>

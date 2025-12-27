@@ -46,7 +46,7 @@ const Navigation = () => {
               className="relative group z-50 flex items-center gap-2 transform transition-transform duration-300 hover:scale-105 hover:-rotate-1"
             >
               <img
-                src="/images/pizzas/logo.png"
+                src={`${import.meta.env.BASE_URL}images/pizzas/logo.png`}
                 alt="Onni Pizza"
                 width="48"
                 height="48"
